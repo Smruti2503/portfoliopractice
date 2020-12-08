@@ -416,9 +416,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 0px;
-  background: linear-gradient(315deg, #040402, #040402);
-  -webkit-box-shadow: -5px -5px 0px #020201,5px 5px 0px #060603;
-          box-shadow: -5px -5px 0px #020201,5px 5px 0px #060603;
+  background:#191919;
 }
 
 #skills .skillContainer:hover {
