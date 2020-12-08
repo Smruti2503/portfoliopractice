@@ -800,7 +800,7 @@ body {
 /*--Responsive Design--*/
 @media screen and (max-width: 556px) {
   html {
-    font-size: 60%;
+    font-size: 80%;
   }
 }
 
