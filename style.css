@@ -805,11 +805,11 @@ body {
 /*--Responsive Design--*/
 @media screen and (max-width: 556px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #header {
     /*---Header Text Section---*/
   }
