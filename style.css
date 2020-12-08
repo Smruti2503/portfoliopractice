@@ -16,7 +16,7 @@ body {
 #header {
   width: 100%;
   height: auto;
-  border-bottom: 0.03rem dashed grey;
+  border-bottom: 0.18rem dashed grey;
   position: relative;
   padding-bottom: 2rem;
   /*--Design--*/
@@ -27,7 +27,7 @@ body {
 #header .design {
   background: linear-gradient(45deg, #ceff1a 15%, #65ff00 65%);
   width: 8vw;
-  height: 0.18rem;
+  height: 0.38rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -166,7 +166,7 @@ body {
 /*---About Section---*/
 #about {
   padding-top: 7rem;
-  border-bottom: 0.03rem dashed grey;
+  border-bottom: 0.18rem dashed grey;
   padding-bottom: 5rem;
   position: relative;
 }
@@ -186,7 +186,7 @@ body {
 #about .design {
   background: linear-gradient(45deg, #ceff1a 15%, #65ff00 65%);
   width: 8vw;
-  height: 0.18rem;
+  height: 0.38rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -364,13 +364,13 @@ body {
   padding-top: 7rem;
   padding-bottom: 5rem;
   position: relative;
-  border-bottom: 0.03rem dashed grey;
+  border-bottom: 0.18rem dashed grey;
 }
 
 #skills .design {
   background: linear-gradient(45deg, #ceff1a 15%, #65ff00 65%);
   width: 8vw;
-  height: 0.18rem;
+  height: 0.38rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -466,13 +466,13 @@ body {
   padding-top: 7rem;
   padding-bottom: 5rem;
   position: relative;
-  border-bottom: 0.03rem dashed grey;
+  border-bottom: 0.18rem dashed grey;
 }
 
 #services .design {
   background: linear-gradient(45deg, #ceff1a 15%, #65ff00 65%);
   width: 8vw;
-  height: 0.18rem;
+  height: 0.38rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -597,13 +597,13 @@ body {
   padding-top: 7rem;
   padding-bottom: 5rem;
   position: relative;
-  border-bottom: 0.03rem dashed grey;
+  border-bottom: 0.18rem dashed grey;
 }
 
 #work .design {
   background: linear-gradient(45deg, #ceff1a 15%, #65ff00 65%);
   width: 8vw;
-  height: 0.18rem;
+  height: 0.38rem;
   display: inline-block;
   position: absolute;
   bottom: 0;
