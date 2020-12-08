@@ -1,0 +1,838 @@
+@import "__group.scss";
+
+/*----Variables----*/
+$priCol:#65ff00;
+$secCol:#ceff1a;
+$designOne:#e0040b;
+$designTwo:#fc5130;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background-color: #040402;
+}
+
+
+/*---Header Section---*/
+#header{
+    width: 100%;
+    height:auto;
+    border-bottom: 0.03rem dashed grey;
+    position: relative;
+    padding-bottom: 2rem;
+  
+
+
+    /*--Design--*/
+    .design{
+        background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+        width:8vw;
+        height:0.18rem;
+        display:inline-block;
+        position: absolute;
+        bottom:0;
+        left:50%;
+        z-index: 2;
+        transform:translateX(-50%) rotate(90deg);
+
+    }
+
+    .designTwo{
+        background:#040402;
+        width:100%;
+        height:1.58rem;
+        display:inline-block;
+        position: absolute;
+        bottom:-1%;
+        z-index: 1;
+        transform:translateX(-50%);
+    }
+
+/*-----Navigation menu Section---*/
+    nav{
+   
+
+        .container{
+
+            .navbar-brand{
+                color: $priCol;
+                font-weight: bolder;
+                font-size: 2rem;
+
+            }
+
+            .navbar-toggler{
+               
+                
+
+             
+                
+            }
+
+            .navbar-toggler-icon{
+                color:white;
+            }
+
+
+
+            .navbar-nav{
+
+
+                .nav-item{
+
+
+                    .nav-link{
+
+                        color: white;
+                        font-weight: bold;
+                        transition: 0.5s linear;
+
+                        &:hover{
+                            color:$priCol;
+                        }
+
+
+
+                    }
+                }
+            }
+
+            .contact{
+                @include buttonOne;
+               
+
+                &:hover{
+                    background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                    color: black;
+                }
+
+                i{
+                   
+                    animation: ring 0.6s infinite;
+                    animation-direction: alternate-reverse;
+                }
+
+                @keyframes ring {
+                    0%{
+                        transform: rotateZ(5deg);
+                    }
+
+                    100%{
+                        transform: rotateZ(-5deg) scale(1.2);
+                    }
+                    
+                }
+            }
+        }
+    }
+
+  /*---Header Text Section---*/  
+  .headerText{
+
+    h2{
+        color: $priCol;
+        font-size: 3.5rem;
+
+        span{
+            background:$priCol;
+            color:black;
+            font-weight:bolder;
+            padding:0 0.5rem;
+            text-transform:uppercase;
+        }
+        
+    }
+
+    p{
+        margin: 2rem 0;
+        font-size:1.4rem;
+        color:grey;
+        line-height: 1.90rem;
+    }
+
+    button{
+        @include buttonOne;
+        font-size: 1.2rem;
+
+        &:hover{
+            background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            color: black;
+        }
+
+       
+
+    }
+
+  }
+
+
+}
+
+
+/*---About Section---*/
+#about{
+    padding-top: 7rem;
+    border-bottom: 0.03rem dashed grey;
+    padding-bottom: 5rem;
+    position: relative;
+    
+
+    
+    .designLeft{
+        background:linear-gradient(45deg, $designOne 0%, $designTwo 55%);
+        position:absolute;
+        top:-0.23rem;
+        left:-8%;
+        width:auto;
+        height:45vh;
+        clip-path: circle(50% at 50% 50%);
+        z-index:-1;
+    }
+
+
+    .design{
+        background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+        width:8vw;
+        height:0.18rem;
+        display:inline-block;
+        position: absolute;
+        bottom:0;
+        left:50%;
+        z-index: 2;
+        transform:translateX(-50%) rotate(90deg);
+
+    }
+
+    .designThree{
+        background:#040402;
+        width: 50%;
+        height:1.58rem;
+        position: absolute;
+        bottom: -1%;
+        right: 0;
+    }
+    
+
+    .aboutHeader{
+        h2{
+            text-transform: uppercase;
+            color: white;
+            font-weight: bolder;
+            font-size: 2rem;
+
+            span{
+                background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                padding: 0 1rem;
+                color: black;
+                font-weight: bolder;
+            }
+        }
+    }
+
+
+    .aboutPhoto{
+        position: relative;
+        overflow: hidden;
+
+
+        &::before{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            top:0;
+            left:0;
+            background:rgba($color: black, $alpha: 0.49);
+            clip-path: polygon(0 0, 0 100%, 100% 0);
+            transition:0.4s;
+            z-index: 1;
+
+        }
+
+        &::after{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            bottom:0;
+            right:0; 
+            background:rgba($color: black, $alpha: 0.49);
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+            transition:0.4s;
+            z-index: 1;
+        }
+
+        &:hover::before{
+            width: 100.02%;
+            height:100.02%;
+        }
+
+        &:hover::after{
+            width: 100.02%;
+            height:100.02%;
+        }
+        &:hover img{
+            transform: scale(1.07) rotateZ(2deg);
+        }
+        &:hover .socials{
+     right:0;
+        }
+
+        
+        .socials{
+            background:linear-gradient(45deg, $designOne 0%, $designTwo 55%);
+            position:absolute;
+            top:0;
+            right:-50%;
+            height:100%;
+            width:auto;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding: 1.2rem;
+     
+            transition:0.4s linear;
+            z-index:2;
+
+            i{
+                margin:0.5rem 0;
+                font-size:1.8rem;
+             
+                transition:0.3s linear;
+
+                &:hover{
+                    transform:scale(1.15);
+                }
+            }
+        }
+        
+
+        img{
+            transition:0.4s;
+        }
+
+  
+        
+
+
+    }
+
+    .aboutText{
+
+        p{
+            font-size:1rem;
+            margin: 2rem 0;
+            color:grey;
+            line-height: 1.90rem;
+            font-weight: bold;
+        }
+
+        h3{
+            font-size:3rem;
+            color:$priCol;
+        }
+
+        h5{
+            font-weight:bolder;
+            color:grey;
+        }
+
+        button{
+            @include buttonOne;
+            margin-bottom: 2rem;
+
+            &:hover{
+                background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                color: black; 
+            }
+        }
+
+    }
+}
+
+
+/*---Skills Section---*/
+#skills{
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+        position: relative;
+        border-bottom: 0.03rem dashed grey;
+
+        .design{
+            background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            width:8vw;
+            height:0.18rem;
+            display:inline-block;
+            position: absolute;
+            bottom:0;
+            left:50%;
+            z-index: 2;
+            transform:translateX(-50%) rotate(90deg);
+    
+        }
+    
+        .designTwo{
+            background:#040402;
+            width:100%;
+            height:1.58rem;
+            display:inline-block;
+            position: absolute;
+            bottom:-1%;
+            z-index: 1;
+            transform:translateX(-50%);
+        }
+
+
+
+        .skillsHeader{
+            h2{
+                text-transform: uppercase;
+                color: white;
+                font-weight: bolder;
+                font-size: 2rem;
+    
+                span{
+                    background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                    padding: 0 1rem;
+                    color: black;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+    .skillContainer{
+        text-align:center;
+        padding: 1.2rem 0;
+        transition:0.4s;
+        border-radius: 0px;
+        background: linear-gradient(315deg, #040402, #040402);
+        box-shadow:  -5px -5px 0px #020201,5px 5px 0px #060603;
+
+                     
+&:hover{
+    box-shadow: 0 0 10px $priCol;
+    transform:scale(1.03);
+ 
+}
+
+        h3{
+            color:grey;
+      
+   
+            
+        }             
+
+        svg.radial-progress {
+            height: auto;
+            max-width: 200px;
+            padding: 1em;
+            transform: rotate(-90deg);
+            width: 100%;
+          }
+          
+          svg.radial-progress circle {
+            fill: rgba(0,0,0,0);
+            stroke: #fff;
+            stroke-dashoffset: 219.91148575129; 
+            stroke-width: 2;
+          }
+          
+          svg.radial-progress circle.incomplete { 
+              opacity: 0; 
+            fill: none;
+            }
+          
+          svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; }
+          
+          svg.radial-progress text {
+            fill: #fff;
+            text-anchor: middle;
+          }
+
+          svg.radial-progress circle {
+               stroke: $priCol; 
+            }
+
+    }
+}
+
+
+/*---Services Section---*/
+#services{
+    padding-top:7rem;
+    padding-bottom:5rem;
+    position:relative;
+    border-bottom: 0.03rem dashed grey;
+
+    
+    .design{
+        background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+        width:8vw;
+        height:0.18rem;
+        display:inline-block;
+        position: absolute;
+        bottom:0;
+        left:50%;
+        z-index: 2;
+        transform:translateX(-50%) rotate(90deg);
+
+    }
+
+    .designThree{
+        background:#040402;
+        width: 50%;
+        height:1.58rem;
+        position: absolute;
+        bottom: -1%;
+        right: 0;
+    }
+    
+
+    .serviceHeader{
+
+        h2{
+            text-transform: uppercase;
+            color: white;
+            font-weight: bolder;
+            font-size: 2rem;
+
+            span{
+                background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                padding: 0 1rem;
+                color: black;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .serviceContainer{
+        box-shadow:  -5px -5px 0px #020201,5px 5px 0px #060603;
+        padding:1rem 0.6rem;
+        position:relative;
+        transition:0.6s;
+       
+
+        &::before{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            top:0;
+            left:0;
+            background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            
+            transition:0.6s;
+            z-index: -1;
+
+        }
+
+        &::after{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            bottom:0;
+            right:0; 
+            background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            
+            transition:0.6s;
+            z-index: -1;
+        }
+
+        &:hover{
+            transform:translateY(-0.5rem);
+        }
+
+        &:hover::before{
+            width:100%;
+            height:100%;  
+        }
+
+        &:hover::after{
+            width:100%;
+            height:100%;
+        }
+
+        &:hover .iconContainer i{
+            background:white;
+           
+            
+        }
+
+        &:hover h4{
+            color:black;
+            font-weight:bolder;
+
+        }
+
+        .iconContainer{
+            margin:1.8rem 0;
+
+            i{
+                background:$priCol;
+                padding:1rem;
+                border-radius: 50%;
+                font-size:1.5rem;
+                transition:0.6s;
+            }
+        }
+
+        h4{
+            text-transform:uppercase;
+            margin: 1.2rem;
+            font-weight:bolder;
+            color:white;
+            transition:0.4s;
+        }
+
+        p{
+            font-weight:bold;
+            color:grey;
+            font-size:0.8rem;
+        }
+    }
+}
+
+/*---Work Section---*/
+#work{
+
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    border-bottom: 0.03rem dashed grey;
+
+    .design{
+        background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+        width:8vw;
+        height:0.18rem;
+        display:inline-block;
+        position: absolute;
+        bottom:0;
+        left:50%;
+        z-index: 2;
+        transform:translateX(-50%) rotate(90deg);
+
+    }
+
+    .designTwo{
+        background:#040402;
+        width:100%;
+        height:1.58rem;
+        display:inline-block;
+        position: absolute;
+        bottom:-1%;
+        right:0;
+        z-index: 1;
+        transform:translateX(-50%);
+    }
+
+    .workHeader{
+
+        h2{
+            text-transform: uppercase;
+            color: white;
+            font-weight: bolder;
+            font-size: 2rem;
+
+            span{
+                background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+                padding: 0 1rem;
+                color: black;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .workContainer{
+        background:#191919;
+        padding:1rem;
+        position:relative;
+        z-index:1;
+        overflow:hidden;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        &::before{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            top:0;
+            left:0;
+            background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            clip-path: polygon(0 0, 0 100%, 100% 0);
+            transition:0.9s;
+            z-index: -1;
+
+        }
+
+        &::after{
+            content:"";
+            width: 00%;
+            height:00%;
+            position:absolute;
+            bottom:0;
+            right:0; 
+            background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+            transition:0.9s;
+            z-index: -1;
+        }
+
+        &:hover::before{
+            width: 200%;
+            height:200%;
+        }
+
+        &:hover::after{
+            width: 200%;
+            height:200%;
+        }
+        &:hover{
+            cursor:pointer;
+        }
+
+        &:hover h5{
+            color:black; 
+        }
+        &:hover i{
+            color:black;
+        }
+
+        &:hover .workImage img{
+            transform:rotate(2deg) scale(1.12);
+        }
+
+
+        h5{
+            margin:1rem 0;
+            color:white;
+            font-weight:bold;
+            transition:0.9s;
+        }
+        p{
+            color:grey;
+            font-weight:600;
+        }
+
+        i{
+            color:$priCol;
+            transition:0.9s;
+        }
+
+        .workImage{
+            overflow:hidden;
+
+            img{
+                transition:0.9s
+            }
+        }
+    }
+
+    .viewBtn{
+        border:none;
+        outline:none;
+        background:$priCol;
+        padding:0.4rem 0.8rem;
+        font-weight:800;
+        
+
+        &:hover{
+            background: linear-gradient(45deg, $secCol 15%, $priCol 65%);
+        }
+    }
+}
+
+/*--Scroll Back to Top Button--*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background:linear-gradient(45deg, $secCol 15%, $priCol 65%);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+
+
+    &:hover i{
+        transform:rotate(-45deg);
+    }
+
+    i{
+       transition:0.4s;
+       color:black;
+    }
+}
+
+
+/*---Scroll Percentage---*/
+.scrollIndicator {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+
+   
+
+      .progress-container {
+        width: 100%;
+        height: 6px;
+        background: #ccc;
+
+        .progress-bar {
+            height: 8px;
+            background: $priCol;
+            width: 0%;
+          }
+      }
+      
+  }
+
+
+
+
+  /*--Responsive Design--*/
+
+  @media screen and (max-width:556px){
+      html{
+          font-size:60%;
+      }
+  }
+
+  @media screen and (max-width:768px){
+
+
+    #header{
+
+    
+      /*---Header Text Section---*/  
+      .headerText{
+          padding-top:3.5rem;
+      }
+    
+    
+    }
+
+  }
+
+  
+ 
+  
+  
+
+  
+ 

@@ -1,0 +1,12 @@
+@mixin buttonOne {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.09rem solid $priCol;
+    color: white;
+    padding: 0.6rem 2.3rem;
+    background: transparent;
+    font-weight: bolder;
+    transition: all 0.5s linear;
+    
+}
